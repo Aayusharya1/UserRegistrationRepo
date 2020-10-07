@@ -11,6 +11,10 @@ namespace UserRegistrationRegex
             Console.WriteLine(result);
             bool result1 = pattern.ValidateName("Arya");
             Console.WriteLine(result1);
+            bool result2 = pattern.ValidateEmail("abc.acc@gmail.co.in");
+            Console.WriteLine(result2);
+
+
         }
     }
 }
