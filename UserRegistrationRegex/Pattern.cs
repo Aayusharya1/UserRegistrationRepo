@@ -7,11 +7,11 @@ namespace UserRegistrationRegex
 {
     class Pattern
     {
-        string Regex_fName = "^[A-Z][a-z]{2,}$";
+        string Regex_Name = "^[A-Z][a-z]{2,}$";
 
-        public bool ValidateFname(string fname)
+        public bool ValidateName(string name)
         {
-            return Regex.IsMatch(fname, Regex_fName);
+            return Regex.IsMatch(name, Regex_Name);
         }
 
 
