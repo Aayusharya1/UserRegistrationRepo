@@ -13,6 +13,9 @@ namespace UserRegistrationRegex
             Console.WriteLine(result1);
             bool result2 = pattern.ValidateEmail("abc.acc@gmail.co.in");
             Console.WriteLine(result2);
+            bool result3 = pattern.ValidateMobileNo("91 9998887776");
+            Console.WriteLine(result3);
+
 
 
         }
