@@ -16,7 +16,7 @@ namespace UserRegistrationRegex
             Console.WriteLine(result2);
             bool result3 = pattern.ValidateMobileNo("919998887776");
             Console.WriteLine(result3);
-            bool result4 = pattern.ValidatePassword("abcd1234");
+            bool result4 = pattern.ValidatePassword("abcD1234@");
             Console.WriteLine(result4);
 
             EmailList();

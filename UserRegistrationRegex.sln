@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationRegex", "UserRegistrationRegex\UserRegistrationRegex.csproj", "{B323431A-FB6D-4182-BC86-FF57A79C62A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserRegistrationRegex", "UserRegistrationRegex\UserRegistrationRegex.csproj", "{B323431A-FB6D-4182-BC86-FF57A79C62A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRegistrationRegexTest", "UserRegistrationRegexTest\UserRegistrationRegexTest.csproj", "{00E6B7DD-9FD5-40D4-82AE-964FA66AEABF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B323431A-FB6D-4182-BC86-FF57A79C62A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B323431A-FB6D-4182-BC86-FF57A79C62A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B323431A-FB6D-4182-BC86-FF57A79C62A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E6B7DD-9FD5-40D4-82AE-964FA66AEABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E6B7DD-9FD5-40D4-82AE-964FA66AEABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E6B7DD-9FD5-40D4-82AE-964FA66AEABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E6B7DD-9FD5-40D4-82AE-964FA66AEABF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
