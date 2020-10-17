@@ -34,11 +34,22 @@ namespace UserRegistrationRegexTest
         public void Test_Invalid_First_Name(string fname)
         {
             // Arrange
-            bool expected = false;
+            string expected = "name should contain atleast 3 characters and first letter should be in UpperCase";
             Pattern pattern = new Pattern();
 
             //Act
-            bool actual = pattern.ValidateName(fname);
+            string actual;
+            try
+            {
+                actual = pattern.ValidateName(fname).ToString();
+            }
+            catch(UserRegistrationException e)
+            {
+                actual = e.Message;
+            
+            }
+
+
 
             //Assert
             Assert.AreEqual(actual, expected);
@@ -52,23 +63,6 @@ namespace UserRegistrationRegexTest
             
             // Arrange
             bool expected = true;
-            Pattern pattern = new Pattern();
-
-            //Act
-            bool actual = pattern.ValidateName(Lname);
-
-            //Assert
-            Assert.AreEqual(actual, expected);
-        }
-
-        [TestMethod]
-        [DataRow("arya")]
-        [DataRow("AAryaaa")]
-        public void Test_Invalid_Last_Name(string Lname)
-        {
-
-            // Arrange
-            bool expected = false;
             Pattern pattern = new Pattern();
 
             //Act
@@ -105,11 +99,19 @@ namespace UserRegistrationRegexTest
         public void Test_Invalid_Email(string email)
         {
             // Arrange
-            bool expected = false;
+            string expected = "Email id should be in \" abc.xyz@bl.co.in \" format (.xyz & .in parts optional)";
             Pattern pattern = new Pattern();
 
-            //Act
-            bool actual = pattern.ValidateEmail(email);
+            string actual;
+            try
+            {
+                actual = pattern.ValidateEmail(email).ToString();
+            }
+            catch (UserRegistrationException e)
+            {
+                actual = e.Message;
+
+            }
 
             //Assert
             Assert.AreEqual(actual, expected);
@@ -137,11 +139,19 @@ namespace UserRegistrationRegexTest
         public void Test_Invalid_Mobile_Number(string mobNo)
         {
             // Arrange
-            bool expected = false;
+            string expected = "Phone number should have 2 digit country code followed by space separated 10 digit number";
             Pattern pattern = new Pattern();
 
-            //Act
-            bool actual = pattern.ValidateMobileNo(mobNo);
+            string actual;
+            try
+            {
+                actual = pattern.ValidateMobileNo(mobNo).ToString();
+            }
+            catch (UserRegistrationException e)
+            {
+                actual = e.Message;
+
+            }
 
             //Assert
             Assert.AreEqual(actual, expected);
@@ -149,7 +159,7 @@ namespace UserRegistrationRegexTest
 
         [TestMethod]
 
-        [DataRow("aaYu12sh@.aaa")]
+        [DataRow("aaYu12sh@aaa")]
         public void Test_Valid_Password(string password)
         {
             // Arrange
@@ -172,8 +182,16 @@ namespace UserRegistrationRegexTest
             bool expected = false;
             Pattern pattern = new Pattern();
 
-            //Act
-            bool actual = pattern.ValidatePassword(password);
+            string actual;
+            try
+            {
+                actual = pattern.ValidateName(password).ToString();
+            }
+            catch (UserRegistrationException e)
+            {
+                actual = e.Message;
+
+            }
 
             //Assert
             Assert.AreEqual(actual, expected);
